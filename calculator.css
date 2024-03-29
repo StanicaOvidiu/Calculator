@@ -1,0 +1,145 @@
+body {
+  background-image: url("images/0_ckDqQOdOpY6roIWC.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.proj {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+  max-height: 520px;
+}
+
+#history {
+  background-color: black;
+  width: 300px;
+  border: 1px solid;
+  border-right-color: white;
+  display: none;
+  overflow-y: auto;
+  border-radius: 20px 0 0 20px;
+}
+
+.calculator {
+  background-color: black;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+#more {
+  background-color: black;
+  width: 150px;
+  border: 1px solid;
+  border-left-color: white;
+  display: none;
+  border-radius: 0 20px 20px 0;
+}
+
+#display {
+  margin: 10px 20px 0;
+  width: 260px;
+  background-color: black;
+  color: white;
+  text-align: right;
+  cursor: context-menu;
+  font-size: 30px;
+  padding-right: 5px;
+  border-bottom: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#display:focus {
+  outline: none;
+}
+
+#result {
+  margin: 0 20px 10px;
+  width: 260px;
+  background-color: black;
+  color: white;
+  text-align: right;
+  cursor: context-menu;
+  font-size: 30px;
+  padding-right: 5px;
+  border-top: none;
+}
+
+#result:focus {
+  outline: none;
+}
+
+button {
+  border-radius: 50%;
+  border-color: black;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(128, 128, 128);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.first-level button {
+  background-color: rgb(54, 69, 79);
+}
+
+.second-level button:last-of-type,
+.third-level button:last-of-type,
+.fourth-level button:last-of-type {
+  background-color: rgb(54, 69, 79);
+}
+
+.second-level button:last-of-type:hover,
+.third-level button:last-of-type:hover,
+.fourth-level button:last-of-type:hover {
+  background-color: rgb(211, 211, 211);
+  color: black;
+}
+
+.fifth-level button:last-of-type {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.fifth-level button:last-of-type:hover {
+  border-color: white;
+}
+
+button:hover {
+  background-color: rgb(211, 211, 211);
+  color: black;
+}
+
+#list li {
+  color: white;
+  list-style: none;
+  text-align: center;
+  border: 1px solid white;
+  margin: 20px 20px;
+  padding: 30px;
+  width: 100px;
+  overflow-x: auto;
+  background-color: gray;
+  border-radius: 20%;
+}
+
+.special {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 120px;
+}
+
+p {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 7px;
+  text-decoration: underline;
+}

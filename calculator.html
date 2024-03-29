@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="proj">
+      <div id="history">
+        <p>History</p>
+        <ul id="list"></ul>
+      </div>
+      <div class="calculator">
+        <div class="zero-level">
+          <button onclick="toggleHistory()">
+            <i class="fa fa-history"></i>
+          </button>
+          <button onclick="toggleMore()">
+            <i class="fas fa-calculator"></i>
+          </button>
+        </div>
+        <input id="display" readonly />
+        <input id="result" readonly />
+        <div class="buttons">
+          <div class="first-level">
+            <button onclick="cancel()">AC</button>
+            <button onclick="append('%')">%</button>
+            <button onclick="back()">
+              <i class="fas fa-backspace"></i>
+            </button>
+            <button onclick="append('/')">/</button>
+          </div>
+          <div class="second-level">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">X</button>
+          </div>
+          <div class="third-level">
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">-</button>
+          </div>
+          <div class="fourth-level">
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>
+          </div>
+          <div class="fifth-level">
+            <button onclick="append('00')">00</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="calculate(display.value)">=</button>
+          </div>
+        </div>
+      </div>
+      <div id="more">
+        <div class="special">
+          <div>
+            <button onclick="append('(')">(</button>
+            <button onclick="append(')')">)</button>
+            <button onclick="append('**')">^</button>
+            <button onclick="append('3.14')">π</button>
+          </div>
+          <div>
+            <button onclick="append('2.71')">e</button>
+            <button onclick="append('sin(')">sin(x)</button>
+            <button onclick="append('cos(')">cos(x)</button>
+            <button onclick="append('log(')">log(x)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
