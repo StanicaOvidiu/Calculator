@@ -102,3 +102,8 @@ function populateList() {
     listContainer.appendChild(listItem);
   }
 }
+
+function clearHistory() {
+  listContainer.innerHTML = "";
+  lv = [];
+}
