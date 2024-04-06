@@ -16,6 +16,8 @@ function append(input) {
   else if (
     (/\d/.test(display.value[display.value.length - 1]) &&
       /[+%\-*\/]/.test(input)) ||
+    (/[./%*+-]/.test(display.value[display.value.length - 1]) &&
+      /[())]/.test(input)) ||
     (/[+%\-*\/]/.test(display.value[display.value.length - 1]) &&
       /\d/.test(input)) ||
     (/[+%\-*\/]/.test(display.value[display.value.length - 1]) &&
@@ -25,6 +27,7 @@ function append(input) {
   else if (
     (display.value[display.value.length - 1] == " " &&
       (/[.()]/.test(input) || /\d/.test(input))) ||
+    (/[()]/.test(display.value[display.value.length - 1]) && input == "00") ||
     (/[(]/.test(display.value[display.value.length - 1]) && input == ")") ||
     (/\d/.test(display.value[display.value.length - 1]) && input == "(") ||
     (display.value[display.value.length - 1] == ")" && /\d/.test(input)) ||
@@ -73,7 +76,13 @@ function cancel() {
 }
 
 function back() {
-  display.value = display.value.slice(0, -1);
+  if (
+    display.value[display.value.length - 1] == "s" ||
+    display.value[display.value.length - 1] == "n" ||
+    display.value[display.value.length - 1] == "g"
+  )
+    display.value = display.value.slice(0, -4);
+  else display.value = display.value.slice(0, -1);
   if (display.value == "") result.value = "";
   else result.value = eval(display.value).toFixed(2);
 }
